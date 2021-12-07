@@ -2,7 +2,7 @@
 
 ## Summary of projects
 
-### DATA SCIENCE PROJECT (PYTHON)
+### DATA SCIENCE PROJECT (PYTHON OR R)
 
 Initial ideas
 
