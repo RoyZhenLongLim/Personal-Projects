@@ -12,10 +12,9 @@ Like so!
 See how this doesn't get wrapped
 
 ## Gaps
-
 If you  need to create extra breaks, you can use br like in html  
 For example,
-<br>
+<br>  
 you can do this
 
-### 1
+###
