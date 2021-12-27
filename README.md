@@ -1,5 +1,5 @@
 # Roy Lim's Personal Repository
-# Potential Career Paths
+## Potential Career Paths
 Trading/Quant Dev
 Software Engineer
 
