@@ -20,3 +20,8 @@ Initial ideas
 ### Miscellaneous Goals
 - [ ] Learn how to write .sh files
 - [ ] Learn C++
+- [ ] [Do Akuna Capital's Option 101 Course](https://akunacapital.teachable.com/p/options101)
+- [ ] Fix my Linkedin Profile
+    - [ ] Include a profile pic
+    - [ ] Include a brief bio
+    - [ ] List my past academicand work experience
