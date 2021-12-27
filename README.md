@@ -1,4 +1,7 @@
 # Roy Lim's Personal Repository
+# Potential Career Paths
+Trading/Quant Dev
+Software Engineer
 
 ## Summary of projects
 
@@ -13,3 +16,7 @@ Initial ideas
 Initial ideas
 
 - [ ] Path finding algorithm
+
+### Miscellaneous Goals
+- [ ] Learn how to write .sh files
+- [ ] Learn C++
