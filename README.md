@@ -1,7 +1,7 @@
 # Roy Lim's Personal Repository
 ## Potential Career Paths
 Trading/Quant Dev  
-Software Engineer
+Software Engineer  
 Data Scientist or Analyst
 
 ## Summary of projects
