@@ -2,8 +2,12 @@
 ## Potential Career Paths
 Trading/Quant Dev  
 Software Engineer
+Data Scientist or Analyst
 
 ## Summary of projects
+
+### Competition
+Learning Pands to participate in Titanic Competition hosted by Kaggle
 
 ### DATA SCIENCE PROJECT (PYTHON OR R)
 
