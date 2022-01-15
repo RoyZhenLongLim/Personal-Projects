@@ -5,6 +5,12 @@
 So, how do you actually apply for internships? While the approach of how exactly
 new people are hired differs from company to company, there are certain keys
 steps in the process.  
+```mermaid
+graph FlowChart;
+    A-->B;
+    B-->C;
+    C-->D;a
+```
 
 ##  Source/Inspirations
 
