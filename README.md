@@ -29,7 +29,7 @@ Initial ideas
 - [ ] Learn how to write .sh files
 - [ ] Learn C++
 - [ ] [Do Akuna Capital's Option 101 Course](https://akunacapital.teachable.com/p/options101)
-- [x] Fix my Linkedin Profile
-      - [ ] Include a profile pic
-      - [ ] Include a brief bio
-      - [ ] List my past academic and work experience
+- [x] Fix my Linkedin Profile  
+      - [ ] Include a profile pic  
+      - [ ] Include a brief bio  
+      - [ ] List my past academic and work experience  
