@@ -33,9 +33,3 @@ Initial ideas
       - [ ] Include a profile pic  
       - [ ] Include a brief bio  
       - [ ] List my past academic and work experience  
-
-```python
-printf("hello world)
-for i in range(0, 5):
-      print(i)
-```
