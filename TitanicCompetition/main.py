@@ -1,7 +1,8 @@
 
 # * Useful Packages
-import numpy as np # Linear Algebra
+# import numpy as np # Linear Algebra
 import pandas as pd # data processing, CSV file, I/O
+
 
 # * Importing data and what they do
 # ? The data contains
@@ -17,3 +18,5 @@ train = pd.read_csv("Data/train.csv")
 # ? survived column
 test = pd.read_csv("Data/test.csv")
 # test = pd.read_csv("TitanicCompetition/Data/test.csv")
+
+#
