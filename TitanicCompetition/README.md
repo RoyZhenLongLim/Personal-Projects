@@ -7,7 +7,7 @@ given a set of data, you must predict who will survive the historical event
 (pretty cool aye!). I will document the struggles I experience and how I
 overcame them.  
 I have also included code to demonstrate what type of coder I am.  
-Please see documentation for a more indepth explanation of some of the data.  
+Please see documentation for a more in-depth explanation of the data used.
 
 # Struggles
 
@@ -24,4 +24,3 @@ with, meaning I had to do another mini-machine learning course in my own time on
 Kaggle.
 
 ## First Attempt 
-For my first attempt, there are 
