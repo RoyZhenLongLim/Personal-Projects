@@ -20,37 +20,17 @@ for param in pile_1:
     print(param + ": ", end="")
     print(train.loc[:, param].corr(train.Survived, method="pearson"))
 
+# Generate bins for data points that are unique but may have an impact on the survival
 for param in pile_1:
-    print(train.loc[:, param].value_counts(bins=8, sort=False))
+    bin = train.loc[:, param].value_counts(bins=6, sort=False).index
+    for range in bin:
+        print(0)
 
+# Determine the probability of survival of given a specified parameters
 pile_2 = pd.Series(["Pclass", "Sex", "SibSp", "Parch", "Embarked"])
 for param in pile_2:
     print(train.groupby(param).Survived.sum() / train.groupby(param).Survived.count())
 
+# Count how many people survived given a specified parameter
 for param in pile_2:
     print(train.groupby(param).Survived.count())
-
-# for param in pile_1:
-#     print(train.Survived.corr(train.loc(param), method="pearson"))
-#
-# passenger_test = pd.concat([train.PassengerId, train.Survived])
-# passenger_corr = train.PassengerId.corr(train.Survived, method="pearson")
-# print(passenger_corr)
-#
-# # Pclass
-# # Finding probability of survival given a certain pclass
-# prob_surv_pclass = train.groupby("Pclass").Survived.sum() / train.groupby("Pclass").Survived.count()
-# print(prob_surv_pclass)
-#
-# # Relevant columns
-# # Determining the probability of survival for each
-# rel_col = train.columns.to_list()
-# # The following columns do not have a significant effect on survival
-# rel_col.remove("Name")
-# rel_col.remove("PassengerId")
-# rel_col.remove("Survived")
-# rel_col.remove("Cabin")
-#
-# # Verifying that the remaining columns will affect survival
-# for col in rel_col:
-#     print(train.groupby(col).Survived.sum() / train.groupby(col).Survived.count())
