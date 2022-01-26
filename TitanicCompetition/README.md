@@ -26,25 +26,32 @@ Kaggle.
 ## First Attempt 
 
 To start off the first attempt, the first task is to clean the data.
-- Since I don't know what data is actually important, I started by analysing whether a certain parameter would affect the probability of survival.
+- Since I don't know what data is actually important, I started by analysing whether a certain parameter would 
+  affect the probability of survival.
 - Using this, we make some qualitative guess at what the machine learning model should return.
 - To do this:
   - The data was sorted into three piles
-    - Pile 1: Determine correlation between survival and parameter
+    - Pile 1: Determine correlation between survival and parameter **OR** any other special treatment
       - This pile refers to Passenger_Id, Age, Fare.
-      - This is because these tend to be unique, meaning instead of grouping them , it is better to see if there is a trend (e.g. whether survival increases with age)
+      - This is because these tend to be unique, meaning instead of grouping them , it is better to see if there is 
+        a trend (e.g. whether survival increases with age) 
+      - The data will also be grouped into 4 sections to see if a specific range of values (e.g. age between 0 - 20) 
+        would provide a higher probability of survival
     - Pile 2: Determine Probability of survival
       - This pile refers to Pclass, Sex, SibSp, Parch and Embarked
       - These piles generally only have a few unique options, meaning passenger can be easily grouped into them
     - Pile 3: Unused
       - Name, Cabin Number and Ticket are arbitrary 
       - There does not seem to be any pattern in the naming and are hence excluded
-      - At the end of the analysis, additional test will be done including these parameters to ensure they do not contain any significant information
+      - At the end of the analysis, additional test will be done including these parameters to ensure they do not 
+        contain any significant information 
       - However, they will be excluded for the initial set of testing.
 
 ### Data Analysis Results
 
 The data has been rounded to two significant figures to help with presentation.
+
+#### Pile 1 
 
 | Parameter    | Correlation Coefficient |
 |--------------|-------------------------|
@@ -52,19 +59,50 @@ The data has been rounded to two significant figures to help with presentation.
 | Age          | -0.08                   |
 | Fare         | 0.26                    |
 
-To understand the following table, it is important to note that the probability of survival is: $a$
+#### Pile 2 
 
-| Parameter | Probability of Survival                |
-|-----------|----------------------------------------|
-| PClass    | 1st = 0.63, 2nd = 0.47, 3rd = 0.24     |
-| Sex       | M = 0.19, F = 0.74                     |
-| SibSp     | 0 = 0.35, 1 = 0.54, 2 = 0.46, 3 = 0.25 |
-| Parch     | 0 = 0.34                               |
+To understand the following table, it is important to note that the probability of survival is:  \alpha
+```markdown
+Probability of Survival = Pr(Alive | Parameter = Specified)
+```
+For example,  the probability of PClass, 1st means the probability that a person in the 1st Passenger Class will 
+survive is 0.63 or 63%.
+
+
+| Parameter | Probability of Survival                                      | Additional Information                                                                                       | 
+|-----------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| PClass    | 1st = 0.63, 2nd = 0.47, 3rd = 0.24                           | Number of people in pclass x are: 1 = 216, 2 = 184, 3 = 491                                                  |
+| Sex       | M = 0.19, F = 0.74                                           | Number of: M = 577, F = 314                                                                                  |
+| SibSp     | 0 = 0.35, 1 = 0.54, 2 = 0.46, 3 = 0.25                       | Number of people with x siblings/spouses are: 0 = 608, 1 = 209, 2 = 28, 3 = 16, 4 = 18, 5 = 5, 8 = 7         |  
+| Parch     | 0 = 0.34, 1 = 0.55, 2 = 0.5, 3 = 0.60, 4 = 0, 5 = 0.2, 6 = 0 | Number of people with x number of parents/children are: 0 = 678, 1 = 118, 2 = 80, 3 = 5, 4 = 4, 5 = 5, 6 = 1 |
 
 ### Data Analysis
 
-[//]: # (| Parameter    | Significance to Survival     | Extra Info |)
+#### Pile 1 Analysis 
 
-[//]: # (|--------------|------------------------------|-----------| )
+Looking at the result, it seems that both Passenger Id and Age do not have a significant impact on whether someone 
+will live or die.  
+However, it seems like the fare does have a weak-moderate correlation to survival.
+- This makes sense as those who paid more in terms of fare may have been given better safety measures or perhaps 
+  given cabins that are near the top of the Titanic for a better view and hence have a greater probability of 
+  getting to safety when the Titanic began to sink
 
-[//]: # (| PassengerId  | Low to None                  |           | )
+#### Pile 2
+
+Pclass seems to be a significant factor in predicting the survival of people. Since Pclass is tied to the fare, the 
+argument made on why fare would affect survival is also relevant here.  
+
+Sex is also a major factor in determine survival. Despite there being less women relative to men, the probability of 
+survival is much higher, which makes sense given that it is common knowledge that during the evacuation, women and 
+children were prioritised when it comes to get a spot on the lifeboats.
+
+It would also seems that the number of sibling, spouse, parent or children have a positive impact on survival as the 
+probability of survival rose with the number of family members (note I am ignoring the data points where people have 
+more than 3 family members on board as they are a minority and may skew the data).
+
+### Afterthoughts
+
+Once I started to do some data analysis, I realised the approach for the unique values wasn't ideal since age is 
+likely to create a difference in survival rate since children were more likely to be evacuated, no matter the 
+gender. As a result, I decide to group data in pile 1 in order to determine whether age (and the other two factors) 
+would affect the probability of survival.

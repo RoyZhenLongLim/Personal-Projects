@@ -20,10 +20,15 @@ for param in pile_1:
     print(param + ": ", end="")
     print(train.loc[:, param].corr(train.Survived, method="pearson"))
 
+for param in pile_1:
+    print(train.loc[:, param].value_counts(bins=8, sort=False))
+
 pile_2 = pd.Series(["Pclass", "Sex", "SibSp", "Parch", "Embarked"])
 for param in pile_2:
     print(train.groupby(param).Survived.sum() / train.groupby(param).Survived.count())
 
+for param in pile_2:
+    print(train.groupby(param).Survived.count())
 
 # for param in pile_1:
 #     print(train.Survived.corr(train.loc(param), method="pearson"))

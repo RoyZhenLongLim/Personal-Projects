@@ -17,15 +17,15 @@ reference.
 ### Data Variables 
 | Variable | Description | Details |
 | --- | --- | --- | 
-| PassengerId |||      |     |
+| PassengerId ||| 
 | Survived | Whether they survived or not | 1 = Survived, 0 = Dead|
 | Pclass | Passenger Class | 1 = 1st, 2 = 2nd, 3 = 3rd |
-| Name |||     |     |
-| Sex |||     |     |
-| Age |||     |     |
-| SibSp | Number of siblings/spouses on board ||     |
-| Parch | Number of parents/children on board ||     |
-| Ticket | Ticket Number ||     |
-| Fare | Cost of Ticket ||     |
-| Cabin | Cabin Number ||      |
+| Name |||
+| Sex |||
+| Age |||
+| SibSp | Number of siblings/spouses on board ||
+| Parch | Number of parents/children on board ||
+| Ticket | Ticket Number ||
+| Fare | Cost of Ticket ||
+| Cabin | Cabin Number || 
 | Embarked | Port of Embarkation | C = Cherbourg; Q = Queenstown; S = Southampton |
