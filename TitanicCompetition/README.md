@@ -44,13 +44,27 @@ To start off the first attempt, the first task is to clean the data.
 
 ### Data Analysis Results
 
+The data has been rounded to two significant figures to help with presentation.
+
 | Parameter    | Correlation Coefficient |
 |--------------|-------------------------|
-| Passenger_Id |                         |
-| Age          |                         |
-| Fare         |                         |
+| Passenger_Id | -0.01                   |
+| Age          | -0.08                   |
+| Fare         | 0.26                    |
+
+To understand the following table, it is important to note that the probability of survival is: $a$
+
+| Parameter | Probability of Survival                |
+|-----------|----------------------------------------|
+| PClass    | 1st = 0.63, 2nd = 0.47, 3rd = 0.24     |
+| Sex       | M = 0.19, F = 0.74                     |
+| SibSp     | 0 = 0.35, 1 = 0.54, 2 = 0.46, 3 = 0.25 |
+| Parch     | 0 = 0.34                               |
+
 ### Data Analysis
 
-| Parameter    | Significance to Survival     | Extra Info |
-|--------------|------------------------------|-----------| 
-| PassengerId  | Low to None                  |           | 
+[//]: # (| Parameter    | Significance to Survival     | Extra Info |)
+
+[//]: # (|--------------|------------------------------|-----------| )
+
+[//]: # (| PassengerId  | Low to None                  |           | )
