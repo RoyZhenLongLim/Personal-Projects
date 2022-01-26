@@ -17,7 +17,13 @@ print(train.columns)
 # Pile 1
 pile_1 = pd.Series(["PassengerId", "Age", "Fare"])
 for param in pile_1:
-    print(train.loc[param])
+    print(param + ": ", end="")
+    print(train.loc[:, param].corr(train.Survived, method="pearson"))
+
+pile_2 = pd.Series(["Pclass", "Sex", "SibSp", "Parch", "Embarked"])
+for param in pile_2:
+    print(train.groupby(param).Survived.sum() / train.groupby(param).Survived.count())
+
 
 # for param in pile_1:
 #     print(train.Survived.corr(train.loc(param), method="pearson"))
