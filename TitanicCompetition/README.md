@@ -35,8 +35,8 @@ To start off the first attempt, the first task is to clean the data.
       - This pile refers to Passenger_Id, Age, Fare.
       - This is because these tend to be unique, meaning instead of grouping them , it is better to see if there is 
         a trend (e.g. whether survival increases with age) 
-      - The data will also be grouped into 4 sections to see if a specific range of values (e.g. age between 0 - 20) 
-        would provide a higher probability of survival
+      - The data will also be grouped into a few different columns to see if a specific range of values (e.g. age 
+        between 0 - 20) would provide a higher probability of survival
     - Pile 2: Determine Probability of survival
       - This pile refers to Pclass, Sex, SibSp, Parch and Embarked
       - These piles generally only have a few unique options, meaning passenger can be easily grouped into them
