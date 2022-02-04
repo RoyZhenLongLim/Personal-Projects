@@ -63,9 +63,9 @@ Overall
     - Figure out what you are going to be great/good at
     - Not about following a path that someone has laid out for you but discover your own path
 
-### Q&A Session
+## Q&A Session
 
-#### You do not rise to the level of your goals. You fall to the level of your systems.
+### You do not rise to the level of your goals. You fall to the level of your systems.
 
 - Sahil reads for an hour in the morning
     - Make a note of anything that sparks your interest
@@ -74,3 +74,12 @@ Overall
     - Try not to force yourself to do a particular topic where you are not excited about it
 - Figure out what your own rhythm is like
     - Hustle culture is stupid
+
+### Mentors and careers
+
+- Keep it informal
+  - Casual mentors are great
+  - Avoid over-formalising 
+  - Just see other people as a source for learning
+- Focus on the role that you want to have
+  - What are the skills you need to have in the longer term
