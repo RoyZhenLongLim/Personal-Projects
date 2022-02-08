@@ -17,6 +17,18 @@ There are two primary traits that make a genius, those being:
 
 The best way to improve your memory is a good encoding of the information the first time something is learnt.
 
+#### 1. Start at higher orders of learning as soon as possible
+
+Refer to Bloom's taxonomies
+- Apply is applying the concepts to problems
+- Analyze means to draw connections between ideas
+  - For instance, what are the differences, similarities between two concepts
+  - How does this idea fit in with other ideas?
+- Evaluate
+  - Provide a judgement, critique, argue against or for.
+- Create 
+  - Design something or assemble something together based on how they fit together
+
 ### 2. Deep Processing
 
 The ability to take an information and look at the bigger pictures.
