@@ -2,7 +2,6 @@
 
 ## Potential Career Paths
 
-Trading/Quant Dev  
 Software Engineer  
 Data Scientist or Analyst
 
@@ -10,25 +9,31 @@ Data Scientist or Analyst
 
 ### Competition
 
-Learning Pandas to participate in Titanic Competition hosted by Kaggle
 
 ### DATA SCIENCE PROJECT (PYTHON OR R)
 
-Initial ideas
+Ongoing
 
-- [ ] Huffman's Code
+- Titanic Competition
+ 
+Potential Ideas 
+
+- House Pricing Competition
+- Something using R and Data Analysis
+
 
 ### ALGORITHM PROJECT (C or C++)
 
-Initial ideas
+Potential Ideas
 
 - [ ] Path finding algorithm
+- [ ] Huffman's Code
+- [ ] Implement some hashing algorithm
 
 ### Miscellaneous Goals
 
 - [ ] Learn how to write .sh files
 - [ ] Learn C++
-- [ ] [Do Akuna Capital's Option 101 Course](https://akunacapital.teachable.com/p/options101)
 - [x] Fix my Linkedin Profile  
       - [ ] Include a profile pic  
       - [ ] Include a brief bio  
