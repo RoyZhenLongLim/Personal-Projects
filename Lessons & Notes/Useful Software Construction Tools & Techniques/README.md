@@ -9,7 +9,7 @@ On a Unix-like system, filters are commands that
 - perform useful transformation on the stream
 - write the transformed bytes to their standard output
 
-Shell I/O redirection can be used to specificy the source and destination files
+Shell I/O redirection can be used to specify the source and destination files
 
 For example
 ```commandline
@@ -111,7 +111,7 @@ Options
 - `-r` sort in descending order (reverse order)
 - `-n` sort numerically rather than lexicographically
 - `-d` dictionary order, ignore non-letters and non-digits
-- `tc` use character c to seperate columns (default is space)
+- `tc` use character c to separate columns (default is space)
 - `-kn` sort on column `n`
 
 ## Unique 
@@ -173,6 +173,6 @@ A regular expression (regex) often thought of as a pattern
   - A shorthand is available for ranges of characters `[first - last]`
     - `[a-e]`, `[a-z]`, `[0-9]`, `[a-zA-z]`, [A-Za-z]`, and `[a-zA-Z0-9]`
 - `^` Square bracket matching can be inverted with ``^`
-  - i.e Match any character except what is in square brackets
+  - i.e. Match any character except what is in square brackets
   - Also used to denote the start of a string
-- `$` is used to denote the end of a strirng
+- `$` is used to denote the end of a string
