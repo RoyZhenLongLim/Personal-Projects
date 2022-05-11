@@ -103,9 +103,10 @@ more than 3 family members on board as they are a minority and may skew the data
 ### Afterthoughts
 
 Once I started to do some data analysis, I realised the approach for the unique values wasn't ideal since age is 
-likely to create a difference in survival rate since children were more likely to be evacuated, no matter the 
-gender. As a result, I decide to group data in pile 1 in order to determine whether age (and the other two factors) 
-would affect the probability of survival.
+likely to create a difference in survival rate since children were more likely to be evacuated, no matter the
+gender. It would be more appropriate to group data in pile 1 before I start. Unforunately, I couldn't get this to work
+so this will be put on a to do list for later in the project.
+
 
 ### Applying Machine Learning
 
