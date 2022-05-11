@@ -1,7 +1,9 @@
 # * Useful Packages
 # import numpy as np  # Linear Algebra
-import pandas as pd                     # data processing, CSV file, I/O
-from sklearn.ensemble import RandomForestRegressor
+import pandas as pd                                     # data processing, CSV file, I/O
+from sklearn.ensemble import RandomForestRegressor      # used to generate the machine learning model
+from sklearn.model_selection import train_test_split    # used to split data into training and validation data
+from sklearn.metrics import mean_absolute_error         # used to determine accuracy of model
 
 # ? train is the data of a subset of all passengers (more specifically 891, we
 # ? to predict the fates of the remaining 418 passengers on board).
@@ -41,6 +43,8 @@ for param in pile_2:
 
 #%%
 
+RANDOM_CONSTANT = 1
+
 parameters_used = ["PassengerId", "Age", "Fare", "Pclass", "Sex", "SibSp", "Parch", "Embarked"]
 cleaned_data = train[parameters_used + ["Survived"]]
 # Getting rid of the NAs
@@ -66,10 +70,15 @@ embarked_map = {
 for key in embarked_map.keys():
     cleaned_data.loc[cleaned_data.Embarked == key, "Embarked"] = embarked_map[key]
 
+# Splitting the data into training and validation data
+train_X, val_X, train_Y, val_Y = train_test_split(cleaned_data[parameters_used], cleaned_data.Survived, random_state=RANDOM_CONSTANT)
 
-train_X = cleaned_data[parameters_used]
-train_Y = cleaned_data.Survived
-forest_model = RandomForestRegressor(random_state=1)
+## Train the model
+forest_model = RandomForestRegressor(random_state=RANDOM_CONSTANT)
 forest_model.fit(train_X, train_Y)
+
+# Verify how accurate the model is
+pred = forest_model.predict(val_X)
+print(mean_absolute_error(val_Y, pred))
 
 #%%

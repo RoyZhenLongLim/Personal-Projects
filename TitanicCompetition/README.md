@@ -109,6 +109,8 @@ would affect the probability of survival.
 
 ### Applying Machine Learning
 
+#### Basic Procedure
+
 The machine learning package used here is sklearn.ensemble.
 
 - This package provides a random forest regressor, which will create multiple decision trees
@@ -125,6 +127,16 @@ The parameters we will be using will be:
 - Number of parents and children
 - Port of embarkation
 
+The data will be split up into two piles (different from the analysis stage) with one being the validation data and one
+being data used to train the model on.
+
+For the purpose of consistency, we will limit the amount of randomness present in the model to monitor its progress.
+- the parameter associated with randomness in the sklearn package will be set to some constant
+  - this parameter is known as `randomstate`
+
+To measure how accurate the model is, we will use mean absolute error.  
+$E[|X - \mu| = \sum |X - \mu|$
+
 #### Issues that popped up
 
 How the package seemed to work was that it converted all parameters into floats.
@@ -136,3 +148,15 @@ How the package seemed to work was that it converted all parameters into floats.
   either a float or an integer
 
 #### Result
+
+| Attempt | Result | Adjustments made for next alteration |
+|---------|--------|--------------------------------------|
+| 1       |        |                                      |
+| 2       |        |                                      |
+| 3       |        |                                      |
+| 4       |        |                                      |
+| 5       |        |                                      |
+| 6       |        |                                      |
+| 7       |        |                                      |
+| 8       |        |                                      |
+| 9       |        |                                      |
