@@ -136,7 +136,7 @@ For the purpose of consistency, we will limit the amount of randomness present i
   - this parameter is known as `randomstate`
 
 To measure how accurate the model is, we will use mean absolute error.  
-$E[|X - \mu| = \sum |X - \mu|$
+$$E[|X - \mu| = \sum |X - \mu|$$
 
 #### Issues that popped up
 
