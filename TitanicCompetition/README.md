@@ -150,14 +150,14 @@ How the package seemed to work was that it converted all parameters into floats.
 
 #### Result
 
-| Attempt | Result | Adjustments made for next alteration |
-|---------|--------|--------------------------------------|
-| 1       |        |                                      |
-| 2       |        |                                      |
-| 3       |        |                                      |
-| 4       |        |                                      |
-| 5       |        |                                      |
-| 6       |        |                                      |
-| 7       |        |                                      |
-| 8       |        |                                      |
-| 9       |        |                                      |
+| Attempt | Result (Mean absolute error) | Adjustments made for next alteration |
+|---------|------------------------------|--------------------------------------|
+| 1       | 0.26                         |                                      |
+| 2       |                              |                                      |
+| 3       |                              |                                      |
+| 4       |                              |                                      |
+| 5       |                              |                                      |
+| 6       |                              |                                      |
+| 7       |                              |                                      |
+| 8       |                              |                                      |
+| 9       |                              |                                      |
