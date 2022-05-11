@@ -15,17 +15,17 @@ reference.
 
 
 ### Data Variables 
-| Variable | Description | Details |
-| --- | --- | --- | 
-| PassengerId ||| 
-| Survived | Whether they survived or not | 1 = Survived, 0 = Dead|
-| Pclass | Passenger Class | 1 = 1st, 2 = 2nd, 3 = 3rd |
-| Name |||
-| Sex |||
-| Age |||
-| SibSp | Number of siblings/spouses on board ||
-| Parch | Number of parents/children on board ||
-| Ticket | Ticket Number ||
-| Fare | Cost of Ticket ||
-| Cabin | Cabin Number || 
-| Embarked | Port of Embarkation | C = Cherbourg; Q = Queenstown; S = Southampton |
+| Variable     | Description                         | Details                                                                         |
+|--------------|-------------------------------------|---------------------------------------------------------------------------------|
+| Passenger Id |                                     |                                                                                 |
+| Survived     | Whether they survived or not        | Survived = 1, Dead = 0                                                          |
+| Pclass       | Passenger Class                     | Separated into 1st, 2nd and 3rd class                                           |
+| Name         |                                     |                                                                                 |
+| Sex          |                                     | Modified to Male = 0, Female = 1                                                |
+| Age          |                                     |                                                                                 |
+| SibSp        | Number of siblings/spouse onboard   |                                                                                 |
+| Parch        | Number of parents/children on board |                                                                                 |
+| Ticket       | Ticket Number                       |                                                                                 |
+| Fare         | Cost of Ticket                      |                                                                                 |
+| Cabin        | Cabin Number                        |                                                                                 |
+| Embarked     | Port of Embarkation                 | C = Cherbourg, Q = Queenstown, S = Southampton, Modified to C = 0, Q = 1, S = 2 |

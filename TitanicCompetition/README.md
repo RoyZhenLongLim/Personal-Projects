@@ -32,8 +32,8 @@ To start off the first attempt, the first task is to clean the data.
 - To do this:
   - The data was sorted into three piles
     - Pile 1: Determine correlation between survival and parameter **OR** any other special treatment
-      - This pile refers to Passenger_Id, Age, Fare.
-      - This is because these tend to be unique, meaning instead of grouping them , it is better to see if there is 
+      - This pile refers to PassengerId, Age, Fare.
+      - This is because these tend to be unique, meaning instead of grouping them, it is better to see if there is 
         a trend (e.g. whether survival increases with age) 
       - The data will also be grouped into a few different columns to see if a specific range of values (e.g. age 
         between 0 - 20) would provide a higher probability of survival
@@ -49,7 +49,7 @@ To start off the first attempt, the first task is to clean the data.
 
 ### Data Analysis Results
 
-The data has been rounded to two significant figures to help with presentation.
+The data has been rounded to two decimal points to help with presentation.
 
 #### Pile 1 
 
@@ -61,7 +61,7 @@ The data has been rounded to two significant figures to help with presentation.
 
 #### Pile 2 
 
-To understand the following table, it is important to note that the probability of survival is:  \alpha
+To understand the following table, it is important to note that the probability of survival is:
 ```markdown
 Probability of Survival = Pr(Alive | Parameter = Specified)
 ```
@@ -71,7 +71,7 @@ survive is 0.63 or 63%.
 
 | Parameter | Probability of Survival                                      | Additional Information                                                                                       | 
 |-----------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| PClass    | 1st = 0.63, 2nd = 0.47, 3rd = 0.24                           | Number of people in pclass x are: 1 = 216, 2 = 184, 3 = 491                                                  |
+| PClass    | 1st = 0.63, 2nd = 0.47, 3rd = 0.24                           | Number of people in Pclass are: 1 = 216, 2 = 184, 3 = 491                                                    |
 | Sex       | M = 0.19, F = 0.74                                           | Number of: M = 577, F = 314                                                                                  |
 | SibSp     | 0 = 0.35, 1 = 0.54, 2 = 0.46, 3 = 0.25                       | Number of people with x siblings/spouses are: 0 = 608, 1 = 209, 2 = 28, 3 = 16, 4 = 18, 5 = 5, 8 = 7         |  
 | Parch     | 0 = 0.34, 1 = 0.55, 2 = 0.5, 3 = 0.60, 4 = 0, 5 = 0.2, 6 = 0 | Number of people with x number of parents/children are: 0 = 678, 1 = 118, 2 = 80, 3 = 5, 4 = 4, 5 = 5, 6 = 1 |
@@ -106,3 +106,33 @@ Once I started to do some data analysis, I realised the approach for the unique 
 likely to create a difference in survival rate since children were more likely to be evacuated, no matter the 
 gender. As a result, I decide to group data in pile 1 in order to determine whether age (and the other two factors) 
 would affect the probability of survival.
+
+### Applying Machine Learning
+
+The machine learning package used here is sklearn.ensemble.
+
+- This package provides a random forest regressor, which will create multiple decision trees
+- Although this package is considered to be slow, it should get the work done.
+
+The parameters we will be using will be:
+
+- Passenger Id
+- Age
+- Fare
+- Passenger Class
+- Sex
+- Number of sibling and spouse
+- Number of parents and children
+- Port of embarkation
+
+#### Issues that popped up
+
+How the package seemed to work was that it converted all parameters into floats.
+
+- This works fine for most parameters since they were either integers or floats already.
+- This does not work with the parameters that are strings, for example, the parameter "Sex" had two different strings (
+  male and female) as its values
+- To get around this issue, we had to modify the data such that **ALL** data fed into the machine learning package was
+  either a float or an integer
+
+#### Result
