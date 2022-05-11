@@ -1,9 +1,9 @@
 # * Useful Packages
-# import numpy as np  # Linear Algebra
-import pandas as pd                                     # data processing, CSV file, I/O
-from sklearn.ensemble import RandomForestRegressor      # used to generate the machine learning model
-from sklearn.model_selection import train_test_split    # used to split data into training and validation data
-from sklearn.metrics import mean_absolute_error         # used to determine accuracy of model
+import numpy as np
+import pandas as pd  # data processing, CSV file, I/O
+from sklearn.ensemble import RandomForestRegressor  # used to generate the machine learning model
+from sklearn.metrics import mean_absolute_error  # used to determine accuracy of model
+from sklearn.model_selection import train_test_split  # used to split data into training and validation data
 
 # ? train is the data of a subset of all passengers (more specifically 891, we
 # ? to predict the fates of the remaining 418 passengers on board).
@@ -28,6 +28,8 @@ pile_1 = pd.Series(["PassengerId", "Age", "Fare"])
 for param in pile_1:
     print(param + ": ", end="")
     print(train.loc[:, param].corr(train.Survived, method="pearson").round(2))
+
+# TODO Group data before analysis
 
 #%%
 
@@ -70,6 +72,10 @@ embarked_map = {
 for key in embarked_map.keys():
     cleaned_data.loc[cleaned_data.Embarked == key, "Embarked"] = embarked_map[key]
 
+#%%
+
+# Attempt 1
+
 # Splitting the data into training and validation data
 train_X, val_X, train_Y, val_Y = train_test_split(cleaned_data[parameters_used], cleaned_data.Survived, random_state=RANDOM_CONSTANT)
 
@@ -79,6 +85,34 @@ forest_model.fit(train_X, train_Y)
 
 # Verify how accurate the model is
 pred = forest_model.predict(val_X)
-print(mean_absolute_error(val_Y, pred))
+mae_v1 = mean_absolute_error(val_Y, pred)
+print(f"The MAE for attempt 1 is {mae_v1}")
+
+#%%
+
+# Attempt 2
+# Since we are doing essentially the same thing, I will make a function that automatically computes MAE
+def get_mae(max_leaf_node, train_X, val_X, train_Y, val_Y):
+    model = RandomForestRegressor(max_leaf_nodes=max_leaf_node, random_state=RANDOM_CONSTANT)
+    model.fit(train_X, train_Y)
+    pred = model.predict(val_X)
+    return mean_absolute_error(val_Y, pred)
+
+# Vary the leaf node and verify the difference in MAE
+leaf_node_sizes = [5, 50, 500, 5000, 50000]
+for size in leaf_node_sizes:
+    mae = get_mae(size, train_X, val_X, train_Y, val_Y)
+    print(f"Max leaf nodes: {size} \t\t Mean Absolute Error {mae}")
+
+mae_v2 = get_mae(50, train_X, val_X, train_Y, val_Y)
+print(f"The MAE for attempt 2 is {mae_v2}, this is an improvement of {mae_v1 - mae_v2}")
+
+#%%
+
+# Attempt 3
+
+# Number of trees used
+n_estimators = [int(x) for x in np.linspace(start = 200, stop = 2000, num = 10)]
+# Number of features ot consider at every split
 
 #%%

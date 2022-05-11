@@ -23,7 +23,7 @@ analysis, which required machine learning knowledge, which I had no experience
 with, meaning I had to do another mini-machine learning course in my own time on
 Kaggle.
 
-## First Attempt 
+## Data Cleaning & Analysis
 
 To start off the first attempt, the first task is to clean the data.
 - Since I don't know what data is actually important, I started by analysing whether a certain parameter would 
@@ -108,16 +108,35 @@ gender. It would be more appropriate to group data in pile 1 before I start. Unf
 so this will be put on a to do list for later in the project.
 
 
-### Applying Machine Learning
+## Applying Machine Learning
 
-#### Basic Procedure
+### Basic Procedure
+
+**TLDR**  
+Using Random Forest Regressors (multiple decisions trees) and using mean absolute error as a mean of accuracy.  
+**End of TLDR**  
 
 The machine learning package used here is sklearn.ensemble.
 
 - This package provides a random forest regressor, which will create multiple decision trees
 - Although this package is considered to be slow, it should get the work done.
 
-The parameters we will be using will be:
+The random forest regressor has a number of parameters can we tweak to suit our use. These include:
+
+- n_estimators: number of trees
+- max_features: max number of features considered for splitting a node 
+- max_depth: max number of levels in each decision tree
+- min_sample_split: min number of data points placed in a node before the node splits
+- min_samples_leaf: min number of data points allowed in a leaf node
+- bootstrap: method for sampling data points
+
+Credit to
+this [article](https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74)
+for recommendations on hyperparameter tuning 
+
+- Method in this article will be used starting from attempt 3
+
+The parameters we will be using to predict survival:
 
 - Passenger Id
 - Age
@@ -135,9 +154,10 @@ For the purpose of consistency, we will limit the amount of randomness present i
 - the parameter associated with randomness in the sklearn package will be set to some constant
   - this parameter is known as `randomstate`
 
-To measure how accurate the model is, we will use mean absolute error.  
+To measure how accurate the model is, we will use mean absolute error (MAE)  
 
-#### Issues that popped up
+
+### Issues that popped up
 
 How the package seemed to work was that it converted all parameters into floats.
 
@@ -147,16 +167,40 @@ How the package seemed to work was that it converted all parameters into floats.
 - To get around this issue, we had to modify the data such that **ALL** data fed into the machine learning package was
   either a float or an integer
 
-#### Result
+### Result
 
-| Attempt | Result (Mean absolute error) | Adjustments made for next alteration |
-|---------|------------------------------|--------------------------------------|
-| 1       | 0.26                         |                                      |
-| 2       |                              |                                      |
-| 3       |                              |                                      |
-| 4       |                              |                                      |
-| 5       |                              |                                      |
-| 6       |                              |                                      |
-| 7       |                              |                                      |
-| 8       |                              |                                      |
-| 9       |                              |                                      |
+#### Attempt 1
+
+###### Results
+The data will be shown to 4 significant figures to better evaluate the difference.
+
+- MAE = 0.2627
+- Not the best but it's a start
+
+##### Adjustment made
+- Will vary the leaf node to see how it affects the accuracy of the model
+
+#### Attempt 2
+
+##### Results
+| Max Number of Leaf Nodes | MAE    |
+|--------------------------|--------|
+| 5                        | 0.2755 |
+| 50                       | 0.2568 |
+| 500                      | 0.2635 |
+| 5000                     | 0.2635 |
+| 50000                    | 0.2635 |
+
+As we reach higher leaf number of leafs nodes, we can see that past a certain point (around 500) that the extra leaf
+nodes do not have any influence on the MAE.  
+It would be ideal for the leaf node to be 50 - 500.
+
+- Set to 50 for the time being as it is the best one we have
+
+##### Adjustments made
+
+Although we tried just changing the leaf nodes, in reality there are a dozen of settings we can change.  
+This calls for more advanced parameter setting.
+
+
+#### Attempt 3 
