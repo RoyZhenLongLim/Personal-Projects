@@ -202,5 +202,9 @@ It would be ideal for the leaf node to be 50 - 500.
 Although we tried just changing the leaf nodes, in reality there are a dozen of settings we can change.  
 This calls for more advanced parameter setting.
 
+We will be using
+the [documentation](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html) from
+the sklearn page to tune the random forest regressor alongside Randomized Search CV (also from sklearn) which will pick
+parameters for each iteration.
 
 #### Attempt 3 
