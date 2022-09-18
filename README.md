@@ -22,13 +22,14 @@ Potential Ideas
 - Something using R and Data Analysis
 
 
-### ALGORITHM PROJECT (C or C++)
+### ALGORITHM PROJECT (C++)
 
 Potential Ideas
 
 - [ ] Path finding algorithm
 - [ ] Huffman's Code
 - [ ] Implement some hashing algorithm
+- [ ] Find bad algorithms (e.g. worstsort, stalinsort etc)
 
 ### Miscellaneous Goals
 
