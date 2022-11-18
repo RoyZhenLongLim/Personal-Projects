@@ -21,6 +21,8 @@ Potential Ideas
 - House Pricing Competition
 - Something using R and Data Analysis
 
+### Research that I have undetaken
+- [Investigating Deep Mixing within Red Giants Branch Stars](https://github.com/RoyZhenLongLim/PHYS1200)
 
 ### ALGORITHM PROJECT (C++)
 
