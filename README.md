@@ -3,7 +3,7 @@
 ## Summary of projects
 ### Data Science Projects
 
-- Titanic Competition (Ongoing)
+- [Titanic Competition (Ongoing)](https://github.com/RoyZhenLongLim/Personal-Projects/tree/master/TitanicCompetition)
 
 ### Research that I have undetaken
 - [Investigating Deep Mixing within Red Giants Branch Stars](https://github.com/RoyZhenLongLim/PHYS1200)
