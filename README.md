@@ -3,7 +3,7 @@
 ## Summary of projects
 ### Data Science Projects
 
-- [Titanic Competition (Ongoing)](https://github.com/RoyZhenLongLim/Personal-Projects/tree/master/TitanicCompetition)
+- [Titanic Competition (Ongoing)](https://github.com/RoyZhenLongLim/TitanicKaggle/tree/main)
   - **Key Skills**: Python, Pandas, Machine learning using Scikit-Learn
   - Trained a machine learning model to predict the survival of passengers aboard the Titanic 
 
