@@ -11,7 +11,7 @@
 - [Investigating Deep Mixing within Red Giants Branch Stars](https://github.com/RoyZhenLongLim/PHYS1200)
   - **Key Skills**: Python, Pandas, Matplotlib, Machine Learning using Scikit-Learn.
   - Trained various machine learning models to predict the mass of stars using their stellar parameters (such as effective temperature and surface gravity).
-  - Mass was used to investigate a currently, 
+  - This was used to investigate Deep Mixing, which is a poorly understood phenomenon within Red Giant Branch Stars.
  - [Applications of Quantum Monte Carlo Method (SQA Undergraduate Research Scholarship)](https://github.com/RoyZhenLongLim/SQA_Undergraduate_Research_Scholarship)
    - **Key Skills**: Theoretical Research, LaTeX   
    - The project involved learning and finding applications for a new quantum algorithm based on Grover's Algorithm.
