@@ -10,7 +10,7 @@
   - Supervised by [A.Prof Sarah Martell](https://research.unsw.edu.au/people/associate-professor-sarah-martell)
   - **Key Skills**: Python, Pandas, Matplotlib, Machine Learning using Scikit-Learn.
   - Trained various machine learning models to predict the mass of stars using their stellar parameters (such as effective temperature and surface gravity).
-  - This was used to investigate Deep Mixing, which is a poorly understood phenomenon within Red Giant Branch Stars.
+  - This was used to investigate potential causes of poorly understood phenomena within Red Giant Branch Stars called Deep Mixing.
  - [Applications of Quantum Monte Carlo Method (SQA Undergraduate Research Scholarship)](https://github.com/RoyZhenLongLim/SQA_Undergraduate_Research_Scholarship)
    - Supervised by [Dr Clément Canonne](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/clement-canonne.html)
    - **Key Skills**: Theoretical Research, LaTeX   
