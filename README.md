@@ -6,6 +6,11 @@
   - Trained a machine learning model to predict the survival of passengers aboard the Titanic 
 
 ## Research that I have undertaken
+- [University Class Scheduling Algorithm](https://github.com/RoyZhenLongLim/COMP4121/tree/main)
+  - Self-directed project done as a part of coursework in COMP4121
+  - **Key Skills**: Python, Numpy, LaTeX
+  - Self-directed research project into how universities create timetables for their students.
+  - Investigated and implemented a variety of contemporary exact and approximate algorithms for solving NP-Hard/NP-complete problems
 - [Investigating Deep Mixing within Red Giants Branch Stars](https://github.com/RoyZhenLongLim/PHYS1200)
   - Supervised by [A.Prof Sarah Martell](https://research.unsw.edu.au/people/associate-professor-sarah-martell)
   - **Key Skills**: Python, Pandas, Matplotlib, Machine Learning using Scikit-Learn.
